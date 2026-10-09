@@ -1,0 +1,47 @@
+name: Request a small Python fix
+description: Ask for a scope check for the US$10 introductory service
+title: "Task request: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public request, not an accepted order. Please use synthetic data and never include credentials, private customer data, or PayPal details. See the README for scope, AI disclosure, and payment terms.
+  - type: input
+    id: source
+    attributes:
+      label: Public repository or minimal code
+      description: Link to code you are authorized to share, or include a short reproducer below.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How to reproduce
+      description: Python version, operating system, dependencies, command, and synthetic input.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Expected and actual result
+      description: State the specific observable result that would count as an accepted fix.
+    validations:
+      required: true
+  - type: input
+    id: timing
+    attributes:
+      label: Review and payment timing
+      description: Can you review and pay through PayPal within two days after scope confirmation? Give your deadline and time zone.
+    validations:
+      required: true
+  - type: checkboxes
+    id: understanding
+    attributes:
+      label: Before requesting work
+      options:
+        - label: I accept the disclosed AI assistance and will review the result.
+          required: true
+        - label: I understand that US$10 and the deliverable must be explicitly agreed before this becomes an order.
+          required: true
+        - label: This is ordinary programming work, outside cybersecurity, and I am authorized to share the supplied materials.
+          required: true
